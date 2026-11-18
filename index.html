@@ -2,12 +2,12 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>ระบบคำนวณเงินเดือน & สมุดบันทึกรายรับรายจ่ายประจำวัน</title>
     <!-- Google Fonts: Prompt -->
     
     
-    <style type="text/css">@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/thai/300/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/300/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/300/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/thai/400/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/500/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/500/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/thai/500/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/600/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/thai/600/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/600/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/700/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/thai/700/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}</style>
+    <style type="text/css">@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/300/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/thai/300/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:300;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/300/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/thai/400/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:400;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/500/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/500/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/thai/500/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:500;src:url(/cf-fonts/s/prompt/5.2.8/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/600/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/thai/600/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:600;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/600/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/thai/700/normal.woff2);unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Prompt';font-style:normal;font-weight:700;src:url(/cf-fonts/s/prompt/5.2.8/latin-ext/700/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -35,6 +35,28 @@
         }
     </script>
     <style>
+        html { -webkit-text-size-adjust: 100%; }
+        body {
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+            padding-bottom: env(safe-area-inset-bottom);
+            overflow-x: hidden;
+        }
+        /* iOS: 16px inputs so tapping a field does not zoom the page */
+        input, select, textarea { font-size: 16px; }
+        @media (max-width: 430px) {
+            .app-shell { padding-left: 10px; padding-right: 10px; padding-top: 12px; }
+            .card { padding: 13px !important; border-radius: 14px; }
+            .card-title { font-size: 14px; line-height: 1.35; }
+            .kpi-value { font-size: 17px !important; line-height: 1.5rem; word-break: break-word; }
+            .sum-row { font-size: 11px; gap: 8px; }
+            .sum-row > span:first-child { min-width: 0; }
+            .calendar-cell { min-height: 50px; padding: 4px; border-radius: 10px; }
+            .modal-card { padding: 14px; border-radius: 14px; max-height: 94vh; }
+            .icon-box { display: none; }
+            .mobile-log-row > * { grid-column: span 12 !important; }
+            .mobile-log-row > button { min-height: 42px; }
+        }
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
@@ -53,32 +75,32 @@
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans min-h-screen antialiased pb-12">
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-6">
+<div class="app-shell max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 space-y-4 sm:space-y-6">
 
     <!-- Header Section -->
-    <header class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4">
+    <header class="card bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
             <div class="p-3 bg-blue-600 text-white rounded-xl shadow-md shadow-blue-500/20">
                 <i data-lucide="wallet" class="w-7 h-7"></i>
             </div>
             <div>
-                <h1 class="text-xl md:text-2xl font-bold text-slate-900 leading-tight">Financial & Payroll Dashboard</h1>
+                <h1 class="card-title text-lg sm:text-xl md:text-2xl font-bold text-slate-900 leading-tight">Financial & Payroll Dashboard</h1>
                 <p class="text-xs md:text-sm text-slate-500">ระบบคำนวณเงินเดือน บันทึก OT แยกประเภทวันลา & รายรับ-รายจ่ายประจำวัน</p>
                 <p class="text-[11px] text-blue-600 mt-1">จ่ายวันสุดท้ายของเดือน: เงินเดือน + OT ของเดือนก่อนหน้า + ค่าบ้าน + เบี้ยขยัน − ประกันสังคม</p>
             </div>
         </div>
 
         <!-- Date Range & Quick Month Selector Controls -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-xl text-xs md:text-sm w-full md:w-auto">
+        <div class="flex flex-col gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-xl text-xs md:text-sm w-full md:w-auto md:flex-row md:items-center">
             <!-- Quick Month Selector -->
-            <div class="flex items-center gap-1.5 pr-2 sm:border-r border-slate-200 w-full sm:w-auto">
+            <div class="flex items-center gap-1.5 pr-2 md:border-r border-slate-200 w-full md:w-auto">
                 <i data-lucide="calendar-days" class="w-4 h-4 text-blue-600"></i>
                 <span class="text-slate-600 font-medium whitespace-nowrap">เดือน:</span>
                 <input type="month" id="monthPicker" onchange="onMonthPickerChange()" class="bg-white border border-slate-200 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 font-semibold text-slate-700 text-xs sm:text-sm">
             </div>
 
             <!-- Custom Date Range -->
-            <div class="flex items-center gap-1 text-slate-600 font-medium pl-0 sm:pl-1">
+            <div class="flex items-center justify-between gap-1 text-slate-600 font-medium pl-0 md:pl-1">
                 <span>วันที่:</span>
             </div>
             <div class="flex items-center gap-2 w-full sm:w-auto">
@@ -90,9 +112,9 @@
     </header>
 
     <!-- Top KPI Cards Overview with Visibility Toggles -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <!-- Card 1: Gross Income -->
-        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
+        <div class="card bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
             <div class="flex items-center justify-between text-slate-500 mb-1">
                 <span class="text-xs font-medium flex items-center gap-1.5">
                     รวมรายรับทั้งสิ้น
@@ -100,14 +122,14 @@
                         <i data-lucide="eye" id="eyeIcon_kpiGross" class="w-3.5 h-3.5"></i>
                     </button>
                 </span>
-                <div class="p-1.5 bg-emerald-50 text-emerald-600 rounded-lg"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
+                <div class="icon-box p-1.5 bg-emerald-50 text-emerald-600 rounded-lg"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
             </div>
-            <div id="kpiGrossIncome" class="text-lg sm:text-2xl font-bold text-emerald-600">0.00 ฿</div>
+            <div id="kpiGrossIncome" class="kpi-value text-lg sm:text-2xl font-bold text-emerald-600">0.00 ฿</div>
             <div class="text-[11px] text-slate-400 mt-1" id="otCycleBadge">รอบคำนวณ OT: -</div>
         </div>
 
         <!-- Card 2: Fixed Expenses -->
-        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
+        <div class="card bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
             <div class="flex items-center justify-between text-slate-500 mb-1">
                 <span class="text-xs font-medium flex items-center gap-1.5">
                     รายจ่ายประจำเดือน
@@ -115,29 +137,29 @@
                         <i data-lucide="eye" id="eyeIcon_kpiFixed" class="w-3.5 h-3.5"></i>
                     </button>
                 </span>
-                <div class="p-1.5 bg-rose-50 text-rose-600 rounded-lg"><i data-lucide="credit-card" class="w-4 h-4"></i></div>
+                <div class="icon-box p-1.5 bg-rose-50 text-rose-600 rounded-lg"><i data-lucide="credit-card" class="w-4 h-4"></i></div>
             </div>
-            <div id="kpiFixedExpenses" class="text-lg sm:text-2xl font-bold text-rose-600">0.00 ฿</div>
+            <div id="kpiFixedExpenses" class="kpi-value text-lg sm:text-2xl font-bold text-rose-600">0.00 ฿</div>
             <div class="text-[11px] text-slate-400 mt-1">ประกันสังคม & รายจ่ายประจำ</div>
         </div>
 
         <!-- Card 3: Daily Expenses -->
-        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
+        <div class="card bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm relative overflow-hidden">
             <div class="flex items-center justify-between text-slate-500 mb-1">
                 <span class="text-xs font-medium">รายจ่ายประจำวันจริง</span>
-                <div class="p-1.5 bg-amber-50 text-amber-600 rounded-lg"><i data-lucide="shopping-bag" class="w-4 h-4"></i></div>
+                <div class="icon-box p-1.5 bg-amber-50 text-amber-600 rounded-lg"><i data-lucide="shopping-bag" class="w-4 h-4"></i></div>
             </div>
-            <div id="kpiDailyExpenses" class="text-lg sm:text-2xl font-bold text-amber-600">0.00 ฿</div>
+            <div id="kpiDailyExpenses" class="kpi-value text-lg sm:text-2xl font-bold text-amber-600">0.00 ฿</div>
             <div class="text-[11px] text-slate-400 mt-1">บันทึกสมุดรายวันในรอบนี้</div>
         </div>
 
         <!-- Card 4: Net Balance -->
-        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-4 rounded-2xl shadow-lg shadow-blue-500/20 relative overflow-hidden col-span-2 sm:col-span-1">
+        <div class="card bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-4 rounded-2xl shadow-lg shadow-blue-500/20 relative overflow-hidden">
             <div class="flex items-center justify-between text-blue-100 mb-1">
                 <span class="text-xs font-medium">เงินคงเหลือหลังหักประกันสังคมและรายจ่ายจริง</span>
                 <div class="p-1.5 bg-white/10 rounded-lg"><i data-lucide="piggy-bank" class="w-4 h-4 text-white"></i></div>
             </div>
-            <div id="kpiNetBalance" class="text-2xl font-bold text-white">0.00 ฿</div>
+            <div id="kpiNetBalance" class="kpi-value text-2xl font-bold text-white">0.00 ฿</div>
             <div class="text-[11px] text-blue-100/80 mt-1">สุทธิหลังหักค่าใช้จ่ายทั้งหมด</div>
         </div>
     </div>
@@ -149,8 +171,8 @@
         <div class="lg:col-span-7 xl:col-span-8 space-y-6">
 
             <!-- Calendar Card -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4">
+            <div class="card bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80">
+                <div class="flex flex-col gap-2 mb-4 sm:flex-row sm:items-center sm:justify-between">
                     <div class="flex items-center gap-2">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
                         <h2 class="font-bold text-slate-800 text-base">ปฏิทินการทำงาน & OT (คลิกวันที่เพื่อบันทึกข้อมูล)</h2>
@@ -175,7 +197,7 @@
             </div>
 
             <!-- Detailed Payroll Summary Breakdowns -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-4">
+            <div class="card bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                     <h3 class="font-bold text-slate-800 flex items-center gap-2 text-base">
                         <i data-lucide="calculator" class="w-5 h-5 text-blue-600"></i>
@@ -191,7 +213,7 @@
                             <i data-lucide="arrow-down-left" class="w-4 h-4"></i>
                         </div>
                         <div class="space-y-2 text-xs text-slate-600 pt-1">
-                            <div class="flex justify-between items-center">
+                            <div class="sum-row flex justify-between items-center">
                                 <span class="flex items-center gap-1">
                                     เงินเดือนพื้นฐาน (เดือนปัจจุบัน):
                                     <button onclick="toggleVisibility('sumBaseSalary')" class="text-slate-400 hover:text-slate-600"><i data-lucide="eye" id="eyeIcon_sumBaseSalary" class="w-3 h-3"></i></button>
@@ -202,8 +224,8 @@
                                 <span class="font-medium text-emerald-900">ค่า OT เดือนก่อน:</span>
                                 <span id="sumOtPay" class="font-bold text-emerald-700">0.00 ฿</span>
                             </div>
-                            <div class="flex justify-between items-center"><span>เบี้ยขยัน (1–15 และ 16–สิ้นเดือน รอบละ 1,000):</span><span id="sumDiligence" class="font-semibold text-slate-800">1,250.00 ฿</span></div>
-                            <div class="flex justify-between items-center"><span>ค่าบ้าน:</span><span id="sumHousing" class="font-semibold text-slate-800">1,000.00 ฿</span></div>
+                            <div class="sum-row flex justify-between items-center"><span>เบี้ยขยัน (1–15 และ 16–สิ้นเดือน รอบละ 1,000):</span><span id="sumDiligence" class="font-semibold text-slate-800">1,250.00 ฿</span></div>
+                            <div class="sum-row flex justify-between items-center"><span>ค่าบ้าน:</span><span id="sumHousing" class="font-semibold text-slate-800">1,000.00 ฿</span></div>
                             <div class="border-t border-slate-200 pt-2 flex justify-between items-center font-bold text-sm text-slate-900">
                                 <span class="flex items-center gap-1">
                                     รวมรายรับก่อนหัก:
@@ -221,9 +243,9 @@
                             <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                         </div>
                         <div class="space-y-2 text-xs text-slate-600 pt-1">
-                            <div class="flex justify-between items-center"><span>ประกันสังคม:</span><span class="font-semibold text-slate-800">875.00 ฿</span></div>
+                            <div class="sum-row flex justify-between items-center"><span>ประกันสังคม:</span><span class="font-semibold text-slate-800">875.00 ฿</span></div>
                             
-                            <div class="flex justify-between items-center"><span>รายจ่ายส่วนตัวที่บันทึกจริง:</span><span id="sumDailyExpenses" class="font-semibold text-slate-800">0.00 ฿</span></div>
+                            <div class="sum-row flex justify-between items-center"><span>รายจ่ายส่วนตัวที่บันทึกจริง:</span><span id="sumDailyExpenses" class="font-semibold text-slate-800">0.00 ฿</span></div>
                             <div class="border-t border-slate-200 pt-2 flex justify-between items-center font-bold text-sm text-slate-900">
                                 <span class="flex items-center gap-1">
                                     รวมประกันสังคม ค่าใช้จ่ายประจำ และรายจ่ายส่วนตัว:
@@ -242,7 +264,7 @@
         <div class="lg:col-span-5 xl:col-span-4 space-y-6">
 
             <!-- Recurring expenses disabled: this payroll has only social-security deduction -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-3">
+            <div class="card bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-3">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                     <div class="flex items-center gap-2">
                         <i data-lucide="list-checks" class="w-5 h-5 text-blue-600"></i>
@@ -262,7 +284,7 @@
             </div>
 
             <!-- Expense Category Breakdown Chart -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-3">
+            <div class="card bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 space-y-3">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                     <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
                         <i data-lucide="pie-chart" class="w-5 h-5 text-blue-600"></i>
@@ -282,7 +304,7 @@
 
 <!-- Modal for Daily Settings & Daily Expense Log -->
 <div id="dayModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+    <div class="bg-white modal-card rounded-2xl max-w-lg w-full p-5 sm:p-6 shadow-2xl space-y-4 sm:space-y-5 max-h-[92vh] sm:max-h-[90vh] overflow-y-auto">
         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
             <div>
                 <h3 id="modalDateTitle" class="font-bold text-slate-800 text-lg">บันทึกข้อมูลวันที่ 2026-09-23</h3>
@@ -365,7 +387,7 @@
 
             <!-- Form Add/Edit Daily Item -->
             <input type="hidden" id="editingDailyLogIndex" value="-1">
-            <div class="grid grid-cols-12 gap-2 pt-1">
+            <div class="grid-cols-12 gap-2 pt-1 flex flex-col sm:grid mobile-log-row">
                 <input type="text" id="newDailyName" placeholder="รายการ (เช่น กาแฟ, แท็กซี่)" class="col-span-5 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <input type="number" id="newDailyAmount" placeholder="จำนวนเงิน" class="col-span-3 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-right focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <select id="newDailyCategory" class="col-span-3 bg-slate-50 border border-slate-200 rounded-lg px-1.5 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -393,7 +415,7 @@
 
 <!-- Modal Add/Edit Fixed Expense Item -->
 <div id="fixedExpenseModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+    <div class="bg-white modal-card rounded-2xl max-w-md w-full p-5 sm:p-6 shadow-2xl space-y-4">
         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
             <h3 id="fixedExpenseModalTitle" class="font-bold text-slate-800 text-base">เพิ่มรายการค่าใช้จ่ายประจำ</h3>
             <button onclick="closeFixedExpenseModal()" class="p-1 text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-5 h-5"></i></button>
@@ -706,7 +728,7 @@ let fixedExpenses = JSON.parse(localStorage.getItem('payroll_fixed_expenses_v2')
 
             const otResultDisplay = calculateOtForDay(current, dayData);
 
-            cell.className = `p-1.5 sm:p-2 min-h-[72px] rounded-xl border ${borderBgClasses} flex flex-col justify-between cursor-pointer transition shadow-sm hover:shadow-md relative group`;
+            cell.className = `calendar-cell p-1.5 sm:p-2 min-h-[72px] rounded-xl border ${borderBgClasses} flex flex-col justify-between cursor-pointer transition shadow-sm hover:shadow-md relative group`;
             cell.onclick = () => openDayModal(dateStr);
 
             cell.innerHTML = `
