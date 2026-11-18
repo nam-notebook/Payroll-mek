@@ -194,7 +194,7 @@
                                 <span class="font-medium text-emerald-900">ค่า OT เดือนก่อน:</span>
                                 <span id="sumOtPay" class="font-bold text-emerald-700 whitespace-nowrap">0.00 ฿</span>
                             </div>
-                            <div class="space-y-1"><span>เบี้ยขยัน (1–15 และ 16–สิ้นเดือน รอบละ 1,000):</span><div class="flex justify-end"><span id="sumDiligence" class="font-semibold text-slate-800 whitespace-nowrap">1,250.00 ฿</span></div></div>
+                            <div class="flex justify-between items-center gap-3"><span>เบี้ยขยัน:</span><span id="sumDiligence" class="font-semibold text-slate-800 whitespace-nowrap">1,250.00 ฿</span></div>
                             <div class="flex justify-between items-center gap-3"><span>ค่าบ้าน:</span><span id="sumHousing" class="font-semibold text-slate-800 whitespace-nowrap">1,000.00 ฿</span></div>
                             <div class="border-t border-slate-200 pt-2 flex justify-between items-center gap-3 font-bold text-sm text-slate-900">
                                 <span class="flex items-center gap-1">
@@ -215,7 +215,7 @@
                         <div class="space-y-2 text-xs text-slate-600 pt-1">
                             <div class="flex justify-between items-center gap-3"><span>ประกันสังคม:</span><span class="font-semibold text-slate-800 whitespace-nowrap">875.00 ฿</span></div>
                             
-                            <div class="flex justify-between items-center gap-3"><span>รายจ่ายส่วนตัวที่บันทึกจริง:</span><span id="sumDailyExpenses" class="font-semibold text-slate-800 whitespace-nowrap">0.00 ฿</span></div>
+                            <div class="flex justify-between items-center gap-3"><span>รวมค่าใช้จ่ายประจำเดือน:</span><span id="sumFixedMonthlyExpenses" class="font-semibold text-slate-800 whitespace-nowrap">0.00 ฿</span></div>
                             <div class="border-t border-slate-200 pt-2 flex justify-between items-center gap-3 font-bold text-sm text-slate-900">
                                 <span class="flex items-center gap-1">
                                     รวมประกันสังคม ค่าใช้จ่ายประจำ และรายจ่ายส่วนตัว:
@@ -709,8 +709,8 @@ let fixedExpenses = JSON.parse(localStorage.getItem('payroll_fixed_expenses_v2')
         document.getElementById('sumDiligence').innerText = actualDiligence.toLocaleString('th-TH', {minimumFractionDigits: 2}) + ' ฿';
         document.getElementById('sumGrossIncome').innerText = fmt(grossIncomeTotal, 'sumGrossNet');
 
-        const sumDailyEl = document.getElementById('sumDailyExpenses');
-        if (sumDailyEl) sumDailyEl.innerText = periodDailyExpensesTotal.toLocaleString('th-TH', {minimumFractionDigits: 2}) + ' ฿';
+        const sumFixedMonthlyEl = document.getElementById('sumFixedMonthlyExpenses');
+        if (sumFixedMonthlyEl) sumFixedMonthlyEl.innerText = fixedExpensesTotal.toLocaleString('th-TH', {minimumFractionDigits: 2}) + ' ฿';
         document.getElementById('sumTotalDeductions').innerText = fmt(totalDeductionsCalculated, 'sumTotalDeductionsVal');
 
         renderCategorizedFixedExpenses();
